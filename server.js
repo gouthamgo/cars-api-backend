@@ -8,6 +8,14 @@ const dbConfig = require('./db');
 
 const carsRoute = require('./routes/carsRoute')
 
+app.get('/', (req,res) =>{
+    res.send("Hello World");
+})
+
+app.get('/greet',(req,res)=>{
+    res.send("Hi Its working")
+})
+
 app.use('/api/cars' , carsRoute);
 
 
